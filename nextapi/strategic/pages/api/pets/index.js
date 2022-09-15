@@ -25,8 +25,19 @@ export default async function handler(req, res) {
         res.status(400).json({ success: false })
       }
       break
-    default:
-      res.status(400).json({ success: false })
-      break
+    case 'DELETE':
+        try {
+          const deletedPet = await Pet.deleteOne(
+            req.body
+          ) /* create a new model in the database */
+          res.status(201).json({ success: true, data: deletedPet })
+        }
+        catch (error) {
+          res.status(400).json({ success: false })
+        }
+        break
+      default:
+        res.status(400).json({ success: false })
+        break
   }
 }

@@ -23,6 +23,7 @@ const EditPet = () => {
     poddy_trained: pet.poddy_trained,
     diet: pet.diet,
     image_url: pet.image_url,
+    description: pet.description,
     likes: pet.likes,
     dislikes: pet.dislikes,
   }

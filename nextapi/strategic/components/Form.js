@@ -16,6 +16,7 @@ const Form = ({ formId, petForm, forNewPet = true }) => {
     poddy_trained: petForm.poddy_trained,
     diet: petForm.diet,
     image_url: petForm.image_url,
+    description: petForm.description,
     likes: petForm.likes,
     dislikes: petForm.dislikes,
   })
@@ -90,6 +91,7 @@ const Form = ({ formId, petForm, forNewPet = true }) => {
     if (!form.owner_name) err.owner_name = 'Owner is required'
     if (!form.species) err.species = 'Species is required'
     if (!form.image_url) err.image_url = 'Image URL is required'
+    if (!form.description) err.description = 'Description is required'
     return err
   }
 
@@ -165,6 +167,15 @@ const Form = ({ formId, petForm, forNewPet = true }) => {
           type="url"
           name="image_url"
           value={form.image_url}
+          onChange={handleChange}
+          required
+        />
+
+        <label htmlFor="description">Description</label>
+        <textarea
+          name="description"
+          maxLength="500"
+          value={form.description}
           onChange={handleChange}
           required
         />

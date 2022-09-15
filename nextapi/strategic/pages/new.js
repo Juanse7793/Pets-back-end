@@ -9,6 +9,7 @@ const NewPet = () => {
     poddy_trained: false,
     diet: [],
     image_url: '',
+    description: '',
     likes: [],
     dislikes: [],
   }
