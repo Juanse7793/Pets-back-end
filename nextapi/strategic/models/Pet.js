@@ -44,6 +44,14 @@ const PetSchema = new mongoose.Schema({
     required: [true, 'Please provide an image url for this pet.'],
     type: String,
   },
+
+  description: {
+    /* Description of your pet */
+    
+    type: String,
+    required: [true, 'Please provide a description for this pet.'],
+    maxlength: [500, 'Description cannot be more than 500 characters'],
+  },
   likes: {
     /* List of things your pet likes to do */
 
