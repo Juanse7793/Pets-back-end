@@ -14,7 +14,7 @@ You can find it's front-end at https://github.com/Juanse7793/Pets-front-end.
 
 ## Live Demo
 
-[Backend](https://budget-back.vercel.app/)
+[Backend](https://budget-back.vercel.app/api/pets)
 
 
 ## Getting Started
